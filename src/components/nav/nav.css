@@ -1,0 +1,27 @@
+.navbar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+  
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70vw;
+    justify-content: space-evenly;
+  }
+  
+  .nav-logout-container {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    width: 20vw;
+    justify-content: space-evenly;
+  }
+  
+  .nav-title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }

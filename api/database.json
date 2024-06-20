@@ -1,0 +1,99 @@
+{
+    "users": [
+        {
+          "id": 1,
+          "name": "Debi",
+          "email": "jtl.art@gmail.com",
+          "isArtist": "true"
+        },
+        {
+          "id": 2,
+          "name": "D'Anna",
+          "email": "me@email.com",
+          "isArtist": "true"
+        }
+      ],
+      "artists": [
+        {
+          "id": 1,
+          "name": "Jaxon Tucker Lewis",
+          "artistStatement": "The late Tucker Lewis was a talented painter with cerebral palsy and limited mobaility who created beautiful masterpieces by communicating with his eyes. He looks up for yes and shakes his head slightly for no. And while he can't physcially paint, he can guide a person called a 'tracker,' with his eyes, creating his own works of art without ever lifting a brush."
+        },
+        {
+          "id": 2,
+          "name": "D'Amale",
+          "artistStatement": "An Expressive Artist who explores their mental turmoil by pouring paint onto a canvas."
+        }
+      ],
+      "galleries": [
+        {
+          "id": 1,
+          "name": "Free Yourself",
+          "userId": 1,
+          "artistId": 1
+        },
+        {
+          "id": 2,
+          "name": "Artistic Wellness",
+          "userId": 2,
+          "artistId": 2
+        },
+        {
+          "id": 3,
+          "name": "Burnt Out",
+          "userId": 2,
+          "artistId": 2
+        }
+      ],
+      "art": [
+        {
+          "id": 1,
+          "name": "Anxiety",
+          "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/Anxiety.jpg?alt=media&token=148d30fe-ac71-407d-9999-eb3631ba7dbf",
+          "description": "true",
+          "galleryId": 2,
+          "artistId": 2
+        },
+        {
+          "id": 2,
+          "name": "Disturbance",
+          "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/Disturbance.jpg?alt=media&token=0f7d7022-f1da-48aa-bde0-de084eb4603e",
+          "description": "true",
+          "galleryId": 2,
+          "artistId": 2
+        },
+        {
+          "id": 3,
+          "name": "Drifting",
+          "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/Drifting.jpg?alt=media&token=33123149-4ac3-4fb1-b682-8254fd4c18f8",
+          "description": "true",
+          "galleryId": 2,
+          "artistId": 2
+        },
+        {
+          "id": 4,
+          "name": "Rock",
+          "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/Rock.JPG?alt=media&token=ebb333cf-11f6-40d0-9fef-2d56db417229",
+          "description": "true",
+          "galleryId": 2,
+          "artistId": 2
+        },
+        {
+          "id": 5,
+          "name": "Evergreen Wish",
+          "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/Evergreen%20Wish.JPG?alt=media&token=060285d6-2446-4843-b35e-19e3900e8824",
+          "description": "true",
+          "galleryId": 1,
+          "artistId": 1
+        },
+        {
+          "id": 5,
+          "name": "Dumpy Youth Reel",
+          "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/Dumpy%20Youth%20Reel.jpg?alt=media&token=5fabfea6-879b-4ee7-b630-5d53b2efc9cd",
+          "description": "true",
+          "galleryId": 1,
+          "artistId": 1
+        }
+      ]
+      
+}
