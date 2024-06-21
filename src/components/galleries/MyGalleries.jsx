@@ -10,6 +10,7 @@ import { getAllArtists, getAllGalleriesByUser, getArtistGallery } from "../../se
 import { useEffect, useState } from "react";
 import { ArtistGalleries } from "./ArtistGalleries";
 
+{/* MY GALLERY ARTIST PORTAL */}
 export const MyGallery = ({ currentUser }) => {
     const [myGallery, setMyGallery] = useState([]);
     const [artists, setArtists] = useState([]);
@@ -44,6 +45,7 @@ export const MyGallery = ({ currentUser }) => {
     //     })
     // }, []);
 
+   { /* JSX to display My Gallery => acting as the Artist portal */ }
     return (
         <>
             <div className="vam-header">

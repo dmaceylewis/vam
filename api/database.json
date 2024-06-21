@@ -17,7 +17,7 @@
         {
           "id": 1,
           "name": "Jaxon Tucker Lewis",
-          "artistStatement": "The late Tucker Lewis was a talented painter with cerebral palsy and limited mobaility who created beautiful masterpieces by communicating with his eyes. He looks up for yes and shakes his head slightly for no. And while he can't physcially paint, he can guide a person called a 'tracker,' with his eyes, creating his own works of art without ever lifting a brush."
+          "artistStatement": "The late Tucker Lewis was a talented painter with cerebral palsy and limited mobility who created beautiful masterpieces by communicating with his eyes. He looks up for yes and shakes his head slightly for no. And while he can't physcially paint, he can guide a person called a 'tracker,' with his eyes, creating his own works of art without ever lifting a brush."
         },
         {
           "id": 2,
@@ -87,9 +87,25 @@
           "artistId": 1
         },
         {
-          "id": 5,
+          "id": 6,
           "name": "Dumpy Youth Reel",
           "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/Dumpy%20Youth%20Reel.jpg?alt=media&token=5fabfea6-879b-4ee7-b630-5d53b2efc9cd",
+          "description": "true",
+          "galleryId": 1,
+          "artistId": 1
+        },
+        {
+          "id": 7,
+          "name": "Life's Double You",
+          "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/Life's%20Double%20You.jpg?alt=media&token=f7145cc7-29d4-4507-829e-bbe435a6eee5",
+          "description": "true",
+          "galleryId": 1,
+          "artistId": 1
+        },
+        {
+          "id": 8,
+          "name": "Space Adventure",
+          "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/Space%20Adventure.jpg?alt=media&token=92c5da49-f350-4425-9b22-cde1e8987e79",
           "description": "true",
           "galleryId": 1,
           "artistId": 1

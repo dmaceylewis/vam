@@ -27,7 +27,8 @@ export const ArtistGalleries = ({ currentUser, myGallery }) => {
         const foundGalleries = galleries.filter((gallery) => gallery.userId === currentUser.id)
         setArtistGallery(foundGalleries)
      },[galleries])
-
+ 
+    { /* JSX to display Single Artist Gallery Card */ }
     return (
         <>
             <div>

@@ -17,15 +17,18 @@ export const ArtistNav = () => {
     const toggle = () => setIsOpen(!isOpen)
 
   return (
-    <div>
-        <Navbar className='navbar'>
+    <div className="container-fluid">
+        <Navbar className="navbar" style={{background: "#e3f2fd"}}>
             <NavbarBrand className='nav-title' href="/">VAM</NavbarBrand>
-            <Nav className='nav'  justified={true} pills={true}>
+            <Nav className='nav' pills={true}>
                 <NavItem>
                     <NavLink href="/galleries">Galleries</NavLink>
                 </NavItem>
                 <NavItem>
                     <NavLink href="/my-galleries">My Galleries</NavLink>
+                </NavItem>
+                <NavItem>
+                    <NavLink href="/create-gallery">New Gallery</NavLink>
                 </NavItem>
             </Nav>
             <Nav className='nav-logout-container'>

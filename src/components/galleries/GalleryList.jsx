@@ -22,6 +22,7 @@ export const GalleriesList = () => {
         })
     }, []);
 
+    { /* JSX to display All VAM Galleries in a List */ }
     return (
         <>
             <div>
