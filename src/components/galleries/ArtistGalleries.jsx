@@ -12,26 +12,27 @@ import { getAllGalleries } from "../../services/galleryService.jsx"
 import { useEffect, useState } from "react";
 
 {/* SINGLE ARTIST GALLERY */}
-export const ArtistGalleries = ({ currentUser, myGallery }) => {
+export const ArtistGalleries = ({ currentUser, myGalleries }) => {
+
     const [galleries, setGalleries] = useState([]);
     const [artistGallery, setArtistGallery] = useState([]);
 
-    useEffect(() => {
-        getAllGalleries().then((galleryArray) => {
-            setGalleries(galleryArray)
-        })
-    }, []);
+    // useEffect(() => {
+    //     getAllGalleries().then((galleryArray) => {
+    //         setGalleries(galleryArray)
+    //     })
+    // }, []);
 
-    {/* Filter Galleries by User */}
-    useEffect(() => {
-        const foundGalleries = galleries.filter((gallery) => gallery.userId === currentUser.id)
-        setArtistGallery(foundGalleries)
-     },[galleries])
+    // {/* Filter Galleries by User */}
+    // useEffect(() => {
+    //     const foundGalleries = galleries.filter((gallery) => gallery.artistId === myGalleries.artistId)
+    //     setArtistGallery(foundGalleries)
+    //  },[myGalleries])
 
     return (
         <>
             <div>
-                {artistGallery.map((gallery) => {
+                {myGalleries.map((gallery) => {
                     return (
                         <CardGroup style={{
                             margin: 5
@@ -39,15 +40,17 @@ export const ArtistGalleries = ({ currentUser, myGallery }) => {
                         key={gallery.id}
                         className="home-card-row">
                             <Card>
-                                <CardImg
-                                    alt="Card image cap"
-                                    src={gallery.url}
-                                    top
-                                    style={{
-                                        height: 300
-                                    }}
-                                    width="100%"
-                                />
+                                {gallery.arts.map((singleArt) => {
+                                    return <CardImg
+                                        alt="Card image cap"
+                                        src={singleArt.image}
+                                        top
+                                        style={{
+                                            height: 300
+                                        }}
+                                        width="100%"
+                                    />
+                                })}
                                 <CardBody>
                                 <CardTitle tag="h5">
                                     {gallery.name}

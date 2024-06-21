@@ -3,6 +3,7 @@ import { ArtistNav } from "../components/nav/ArtistNav.jsx"
 import { Galleries } from "../components/galleries/Galleries.jsx"
 import { Home } from "../components/home/Home.jsx"
 import { MyGallery } from "../components/galleries/MyGalleries.jsx"
+import { ArtistGalleries } from "../components/galleries/ArtistGalleries.jsx"
 
 export const ArtistViews = ({ currentUser }) => {
     return (
@@ -23,10 +24,12 @@ export const ArtistViews = ({ currentUser }) => {
             <Route path="galleries">
                 <Route index element={<Galleries currentUser={currentUser} />} />
             </Route>
+            {/* <Route path="gallery/:galleryId" element={<ArtistGalleries />} /> */}
                 <Route
                     path="/my-galleries"
                     element={<MyGallery currentUser={currentUser} />}
                 />
+                
             {/* <Route
                 path="/editGallery/:galleryId"
                 element={<EditGallery currentUser={currentUser} />}

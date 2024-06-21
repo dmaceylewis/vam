@@ -9,5 +9,5 @@ export const getArtistGallery = (id) => {
 }
 
 export const getAllGalleriesByUser = (id) => {
-    return fetch(`http://localhost:8088/galleries?userId=${id}`).then(res => res.json())
+    return fetch(`http://localhost:8088/galleries?userId=${id}&_expand=artist&_embed=arts`).then(res => res.json())
 }

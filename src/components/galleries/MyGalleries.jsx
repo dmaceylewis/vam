@@ -29,17 +29,18 @@ export const MyGallery = ({ currentUser }) => {
     }, []);
     
          {/* Filter Artists by User */}
-         useEffect(() => {
-            const foundArtist = galleries.map((gallery) => {
-                const galleryArtist = artists.filter((artist) => artist.id === gallery.artistId)
-                return galleryArtist
-            })
-            console.log(foundArtist)
-            setFoundGalleryArtists(foundArtist)
-         },[]);
-
+    //      useEffect(() => {
+    //         const foundArtist = galleries.map((gallery) => {
+    //             const galleryArtist = artists.filter((artist) => artist.id === gallery.artistId)
+    //             console.log(galleryArtist)
+    //             return galleryArtist[0]
+    //         })
+    //         setFoundGalleryArtists(foundArtist[0])
+    //      },[foundGalleryArtists]);
+         
     // useEffect(() => {
-    //     getArtistGallery(artist.id).then((galleryArray) => {
+
+    //     getArtistGallery(foundGalleryArtists.id).then((galleryArray) => {
     //         setMyGallery(galleryArray)
     //     })
     // }, []);
@@ -50,9 +51,9 @@ export const MyGallery = ({ currentUser }) => {
             
                 <article className="vam-title" >
                     <h1>VAM</h1>
-                    {myGallery.map((gallery) => {
+                    {galleries.map((gallery) => {
                     return (
-                    <h1 key={gallery.id}>{gallery.artist.name}</h1>
+                    <h1 key={gallery.id}>{gallery.artist?.name}</h1>
                             )
                     })}
                 </article>
@@ -89,7 +90,7 @@ export const MyGallery = ({ currentUser }) => {
                         </span>
                     </h1>
                 </article>
-                <ArtistGalleries currentUser={currentUser} myGallery={myGallery} />
+                <ArtistGalleries currentUser={currentUser} myGalleries={galleries} />
             </div>
         </>
     )
