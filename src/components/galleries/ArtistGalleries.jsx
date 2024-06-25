@@ -8,31 +8,39 @@ import {
     CardTitle
 } from "reactstrap"
 import "./galleries.css"
-import { getAllGalleries } from "../../services/galleryService.jsx"
 import { useEffect, useState } from "react";
 
 {/* SINGLE ARTIST GALLERY */}
-export const ArtistGalleries = ({ currentUser, myGallery }) => {
-    const [galleries, setGalleries] = useState([]);
-    const [artistGallery, setArtistGallery] = useState([]);
+export const ArtistGalleries = ({ myGalleries }) => {
+    const [photos, setPhotos] = useState([]);
+    const [image, setImage] = useState({});
 
     useEffect(() => {
-        getAllGalleries().then((galleryArray) => {
-            setGalleries(galleryArray)
+        const newPhotoArray = []
+        myGalleries[0]?.arts?.forEach((singleArt) => {
+        newPhotoArray.push({
+            image: singleArt.image})
         })
-    }, []);
+        setPhotos(newPhotoArray)
 
-    {/* Filter Galleries by User */}
+    }, [myGalleries])
+
+    const showRandomArt = () => {
+        
+        const randomIndex = Math.floor(Math.random() * photos.length);
+        
+        const randomImage = photos[randomIndex]?.image;
+        setImage(randomImage);
+    }
+
     useEffect(() => {
-        const foundGalleries = galleries.filter((gallery) => gallery.userId === currentUser.id)
-        setArtistGallery(foundGalleries)
-     },[galleries])
- 
-    { /* JSX to display Single Artist Gallery Card */ }
+        showRandomArt()
+    }, [photos])
+
     return (
         <>
             <div>
-                {artistGallery.map((gallery) => {
+                {myGalleries.map((gallery) => {
                     return (
                         <CardGroup style={{
                             margin: 5
@@ -41,19 +49,20 @@ export const ArtistGalleries = ({ currentUser, myGallery }) => {
                         className="home-card-row">
                             <Card>
                                 <CardImg
-                                    alt="Card image cap"
-                                    src={gallery.url}
-                                    top
-                                    style={{
-                                        height: 300
-                                    }}
-                                    width="100%"
-                                />
+                                        alt="Card image cap"
+                                        src={image}
+                                        top
+                                        style={{
+                                            height: 300
+                                        }}
+                                        width="100%"
+                                    />
+                            
                                 <CardBody>
                                 <CardTitle tag="h5">
                                     {gallery.name}
                                 </CardTitle>
-                                <Link to={`/gallery/${gallery.id}`}>
+                                <Link to={`/galleries/${gallery.id}`}>
                                     <Button 
                                         block 
                                         color="primary" 

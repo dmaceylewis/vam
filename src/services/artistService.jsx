@@ -9,5 +9,21 @@ export const getArtistGallery = (id) => {
 }
 
 export const getAllGalleriesByUser = (id) => {
-    return fetch(`http://localhost:8088/galleries?userId=${id}`).then(res => res.json())
+    return fetch(`http://localhost:8088/galleries?userId=${id}&_expand=artist&_embed=arts`).then(res => res.json())
+}
+
+export const createArtist = (artist) => {
+    return fetch(`http://localhost:8088/artists`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(artist)
+    })
+    .then(() => {
+        return res.json()
+    })
+    .then((artist) => {
+        return artist.id
+    })
 }

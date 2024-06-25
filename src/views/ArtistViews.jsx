@@ -1,9 +1,12 @@
 import { Outlet, Route, Routes } from "react-router-dom"
 import { ArtistNav } from "../components/nav/ArtistNav.jsx"
-import { Galleries } from "../components/galleries/Galleries.jsx"
 import { Home } from "../components/home/Home.jsx"
+import { Galleries } from "../components/galleries/Galleries.jsx"
+import { SingleArtGallery } from "../components/galleries/SingleArtGallery.jsx"
 import { MyGallery } from "../components/galleries/MyGalleries.jsx"
-import { NewGallery } from "../components/forms/CreateGalleries.jsx"
+import { CreateNewGalleries } from "../components/forms/NewGallery.jsx"
+import { NewGalleryExistingArtist } from "../components/forms/NewGalleryExistingArtist.jsx"
+import { NewGalleryNewArtist } from "../components/forms/CreateGalleryNewArtist.jsx"
 
 export const ArtistViews = ({ currentUser }) => {
     return (
@@ -23,6 +26,10 @@ export const ArtistViews = ({ currentUser }) => {
             {/* ALL GALLERIES ROUTE */}
             <Route path="galleries">
                 <Route index element={<Galleries currentUser={currentUser} />} />
+                    <Route
+                        path=":galleryId"
+                        element={<SingleArtGallery currentUser={currentUser} />}
+                    />
             </Route>
 
             {/* MY GALLERIES ROUTE */}
@@ -32,10 +39,17 @@ export const ArtistViews = ({ currentUser }) => {
             />
 
             {/* CREATE NEW GALLERY ROUTE */}
-            <Route
-                path="/create-gallery"
-                element={<NewGallery currentUser={currentUser} />}
-            />
+            <Route path="/create-gallery">
+                    <Route index element={<CreateNewGalleries currentUser={currentUser} />} />
+                    <Route
+                        path=":existing-artist"
+                        element={<NewGalleryExistingArtist currentUser={currentUser} />}
+                    />
+            </Route>
+                    <Route
+                        path="/create-gallery/new-artist"
+                        element={<NewGalleryNewArtist currentUser={currentUser} />}
+                    />
 
             {/* <Route
                 path="/editGallery/:galleryId"

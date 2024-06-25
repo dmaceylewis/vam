@@ -45,11 +45,13 @@
           "artistId": 2
         }
       ],
-      "art": [
+      "arts": [
         {
           "id": 1,
           "name": "Anxiety",
           "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/Anxiety.jpg?alt=media&token=148d30fe-ac71-407d-9999-eb3631ba7dbf",
+          "width": 1080,
+          "height": 1620,
           "description": "true",
           "galleryId": 2,
           "artistId": 2
@@ -58,6 +60,8 @@
           "id": 2,
           "name": "Disturbance",
           "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/Disturbance.jpg?alt=media&token=0f7d7022-f1da-48aa-bde0-de084eb4603e",
+          "width": 1080,
+          "height": 1620,
           "description": "true",
           "galleryId": 2,
           "artistId": 2
@@ -66,6 +70,8 @@
           "id": 3,
           "name": "Drifting",
           "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/Drifting.jpg?alt=media&token=33123149-4ac3-4fb1-b682-8254fd4c18f8",
+          "width": 1080,
+          "height": 720,
           "description": "true",
           "galleryId": 2,
           "artistId": 2
@@ -74,6 +80,8 @@
           "id": 4,
           "name": "Rock",
           "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/Rock.JPG?alt=media&token=ebb333cf-11f6-40d0-9fef-2d56db417229",
+          "width": 1080,
+          "height": 1080,
           "description": "true",
           "galleryId": 2,
           "artistId": 2
@@ -82,6 +90,8 @@
           "id": 5,
           "name": "Evergreen Wish",
           "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/Evergreen%20Wish.JPG?alt=media&token=060285d6-2446-4843-b35e-19e3900e8824",
+          "width": 1080,
+          "height": 1080,
           "description": "true",
           "galleryId": 1,
           "artistId": 1
@@ -90,6 +100,8 @@
           "id": 6,
           "name": "Dumpy Youth Reel",
           "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/Dumpy%20Youth%20Reel.jpg?alt=media&token=5fabfea6-879b-4ee7-b630-5d53b2efc9cd",
+          "width": 1080,
+          "height": 1620,
           "description": "true",
           "galleryId": 1,
           "artistId": 1
@@ -98,6 +110,8 @@
           "id": 7,
           "name": "Life's Double You",
           "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/Life's%20Double%20You.jpg?alt=media&token=f7145cc7-29d4-4507-829e-bbe435a6eee5",
+          "width": 1080,
+          "height": 1549,
           "description": "true",
           "galleryId": 1,
           "artistId": 1
@@ -106,6 +120,8 @@
           "id": 8,
           "name": "Space Adventure",
           "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/Space%20Adventure.jpg?alt=media&token=92c5da49-f350-4425-9b22-cde1e8987e79",
+          "width": 1080,
+          "height": 780,
           "description": "true",
           "galleryId": 1,
           "artistId": 1

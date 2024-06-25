@@ -1,0 +1,19 @@
+.auth-fieldset{
+    margin: 10px;
+    border: none;
+
+}
+
+.auth-button{
+    background-color:  #00FE53;
+}
+
+.register-link{
+    color:  #5300FE;
+}
+
+.auth-form-input{
+    height: 35px;
+    padding: 5px;
+    border-radius: 5px;
+}

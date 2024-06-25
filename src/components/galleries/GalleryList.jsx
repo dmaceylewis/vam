@@ -34,20 +34,22 @@ export const GalleriesList = () => {
                         key={gallery.id}
                         className="home-card-row">
                             <Card>
-                                <CardImg
-                                    alt="Card image cap"
-                                    src={gallery.url}
-                                    top
-                                    style={{
-                                        height: 300
-                                    }}
-                                    width="100%"
-                                />
+                                {gallery.arts.map((singleArt) => {
+                                    return <CardImg
+                                        alt="Card image cap"
+                                        src={singleArt.image}
+                                        top
+                                        style={{
+                                            height: 300
+                                        }}
+                                        width="100%"
+                                    />
+                                })}
                                 <CardBody>
                                 <CardTitle tag="h5">
                                     {gallery.name}
                                 </CardTitle>
-                                <Link to={`/gallery/${gallery.id}`}>
+                                <Link to={`/galleries/${gallery.id}`}>
                                     <Button 
                                         block 
                                         color="primary" 
