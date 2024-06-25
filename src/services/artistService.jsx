@@ -20,7 +20,7 @@ export const createArtist = (artist) => {
         },
         body: JSON.stringify(artist)
     })
-    .then(() => {
+    .then((res) => {
         return res.json()
     })
     .then((artist) => {

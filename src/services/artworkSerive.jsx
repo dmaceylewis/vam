@@ -17,10 +17,4 @@ export const createArt = (art) => {
         },
         body: JSON.stringify(art)
     })
-    .then(() => {
-        return res.json()
-    })
-    .then((art) => {
-        return art.id
-    })
 }

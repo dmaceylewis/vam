@@ -12,7 +12,7 @@ export const createGallery = (gallery) => {
         },
         body: JSON.stringify(gallery)
     })
-    .then(() => {
+    .then((res) => {
         return res.json()
     })
     .then((gallery) => {

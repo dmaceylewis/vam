@@ -17,12 +17,22 @@ import { getAllArtists } from "../../services/artistService";
 
 export const NewGalleryExistingArtist = ({ currentUser }) => {
     const [artists, setArtists] = useState([]);
+    const [chosenArtist, setChosenArtist] = useState({});
 
     useEffect(() => {
         getAllArtists().then((galleryArray) => {
             setArtists(galleryArray)
         })
     }, []);
+
+    {/* Select Artist Dropdown Function */}
+    const handleArtistChoice = (changeEvent) => {
+        if (changeEvent.target.id === "artists") {
+           setChosenArtist(parseInt(changeEvent.target.value))
+        }
+     }
+     document.addEventListener("change", handleArtistChoice)
+
 
     const [newGallery, setNewGallery] = useState({
         name: ""
@@ -49,9 +59,9 @@ export const NewGalleryExistingArtist = ({ currentUser }) => {
         createGallery(gallery).then((galleryId) => {
             if (galleryId) {
                 const artSendToAPI = {
-                    name: "",
-                    image: "",
-                    description: "",
+                    name: newArtInGallery.name,
+                    image: newArtInGallery.image,
+                    description: newArtInGallery.description,
                     galleryId: galleryId
                 }
                 createArt(artSendToAPI)
@@ -98,6 +108,11 @@ export const NewGalleryExistingArtist = ({ currentUser }) => {
                                 id="artists"
                                 name="select"
                                 type="select"
+                                onChange={(event) => {
+                                    const artistCopy = { ...newGallery };
+                                    artistCopy.artistId = event.target.value;
+                                    setNewGallery(artistCopy);
+                                  }}
                                 >
                                     <option value= '0'>
                                         Select Artist...
