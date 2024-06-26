@@ -14,7 +14,9 @@ export const NewGalleryNewArtist = ({ currentUser }) => {
     const [newArtInGallery, setNewArtInGallery] = useState({
         name: "",
         image: "",
-        description: ""
+        description: "",
+        width: 0,
+        height: 0
     });
 
     const [newArtist, setNewArtist] = useState({
@@ -37,9 +39,11 @@ export const NewGalleryNewArtist = ({ currentUser }) => {
         createGallery(gallery).then((galleryId) => {
             if (galleryId) {
                 const artSendToAPI = {
-                    name: "",
-                    image: "",
-                    description: "",
+                    name: newArtInGallery.name,
+                    image: newArtInGallery.image,
+                    description: newArtInGallery.description,
+                    width: newArtInGallery.width,
+                    height: newArtInGallery.height,
                     galleryId: galleryId
                 }
                 createArt(artSendToAPI)
@@ -47,8 +51,8 @@ export const NewGalleryNewArtist = ({ currentUser }) => {
         }).then(() => {
             
                 const artistSendToAPI = {
-                    name: "",
-                    artistStatement: ""
+                    name: newArtist.name,
+                    artistStatement: newArtist.artistStatement
                 }
                 createArtist(artistSendToAPI)
             
@@ -170,6 +174,34 @@ export const NewGalleryNewArtist = ({ currentUser }) => {
                             setNewArtInGallery(artCopy);
                           }}
                     />
+                </FormGroup>
+
+                <FormGroup>
+                    <Input
+                        id="exampleText"
+                        name="text"
+                        placeholder="Enter artwork width here"
+                        type="textarea"
+                        onChange={(event) => {
+                            const artCopy = { ...newArtInGallery };
+                            artCopy.width = event.target.value;
+                            setNewArtInGallery(artCopy);
+                            }}
+                            />
+                </FormGroup>
+
+                <FormGroup>
+                    <Input
+                        id="exampleText"
+                        name="text"
+                        placeholder="Enter artwork height here"
+                        type="textarea"
+                        onChange={(event) => {
+                            const artCopy = { ...newArtInGallery };
+                            artCopy.height = event.target.value;
+                            setNewArtInGallery(artCopy);
+                            }}
+                            />
                 </FormGroup>
                 
                 <FormGroup>

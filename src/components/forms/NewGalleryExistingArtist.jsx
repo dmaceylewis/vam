@@ -7,8 +7,7 @@ import {
     Col, 
     Form, 
     FormGroup, 
-    Input, 
-    Label 
+    Input
 } from "reactstrap";
 import { createGallery } from "../../services/galleryService";
 import { createArt } from "../../services/artworkSerive";
@@ -41,7 +40,9 @@ export const NewGalleryExistingArtist = ({ currentUser }) => {
     const [newArtInGallery, setNewArtInGallery] = useState({
         name: "",
         image: "",
-        description: ""
+        description: "",
+        width: 0,
+        height: 0
     });
 
     const navigate = useNavigate();
@@ -62,6 +63,8 @@ export const NewGalleryExistingArtist = ({ currentUser }) => {
                     name: newArtInGallery.name,
                     image: newArtInGallery.image,
                     description: newArtInGallery.description,
+                    width: newArtInGallery.width,
+                    height: newArtInGallery.height,
                     galleryId: galleryId
                 }
                 createArt(artSendToAPI)
@@ -182,6 +185,34 @@ export const NewGalleryExistingArtist = ({ currentUser }) => {
                         onChange={(event) => {
                             const artCopy = { ...newArtInGallery };
                             artCopy.name = event.target.value;
+                            setNewArtInGallery(artCopy);
+                            }}
+                            />
+                </FormGroup>
+
+                <FormGroup>
+                    <Input
+                        id="exampleText"
+                        name="text"
+                        placeholder="Enter artwork width here"
+                        type="textarea"
+                        onChange={(event) => {
+                            const artCopy = { ...newArtInGallery };
+                            artCopy.width = event.target.value;
+                            setNewArtInGallery(artCopy);
+                            }}
+                            />
+                </FormGroup>
+
+                <FormGroup>
+                    <Input
+                        id="exampleText"
+                        name="text"
+                        placeholder="Enter artwork height here"
+                        type="textarea"
+                        onChange={(event) => {
+                            const artCopy = { ...newArtInGallery };
+                            artCopy.height = event.target.value;
                             setNewArtInGallery(artCopy);
                             }}
                             />
