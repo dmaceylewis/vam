@@ -7,7 +7,7 @@ export const getGalleryById = (id) => {
     return fetch(`http://localhost:8088/galleries/${id}?_expand=artist&_embed=arts`).then(res => res.json())
 }
 
-// ADD NEW GALLERY TO MY GALLERY FETCH CALL => see module CreateGalleries.jsx
+// ADD NEW GALLERY TO MY GALLERY FETCH CALL => see module CreateGalleryNewArtist.jsx & NewGalleryExistingArtist.jsx
 export const createGallery = (gallery) => {
     return fetch(`http://localhost:8088/galleries`, {
         method: "POST",
@@ -24,13 +24,9 @@ export const createGallery = (gallery) => {
     })
 }
 
-
-// export const createGallery = (id) => {
-//     return fetch(`http://localhost:8088/galleries?userId=${id}&_embed=art&_expand=artist`, {
-//         method: "POST",
-//         headers: {
-//             "Content-Type": "application/json",
-//         },
-//         body: JSON.stringify(id)
-//     })
-// }
+// DELETE IMAGE FROM GALLERY FETCH CALL => see module ArtistGalleries.jsx
+export const deleteGallery = (galleryId) => {
+    return fetch(`http://localhost:8088/galleries/${galleryId}`, {
+        method: "DELETE"
+    })
+}

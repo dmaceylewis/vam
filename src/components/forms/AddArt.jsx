@@ -1,8 +1,8 @@
 {/* PURPOSE: Add Art to Gallery */}
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { Button, Card, CardHeader, Form, FormGroup, Input, List, ListGroup, ListGroupItem } from "reactstrap";
+import { Breadcrumb, BreadcrumbItem, Button, Card, CardHeader, Form, FormGroup, Input, List, ListGroup, ListGroupItem } from "reactstrap";
 import { createArt } from "../../services/artworkSerive";
 
 
@@ -14,11 +14,10 @@ export const AddArt = ({ currentUser }) => {
         name: "",
         image: "",
         description: "",
-        width: 0,
-        height: 0
+        width: "",
+        height: ""
     });
 
-    const navigate = useNavigate();
 
     {/* Add Artwork Button Function */}
     const handleAddArtwork = (event) => {
@@ -34,11 +33,42 @@ export const AddArt = ({ currentUser }) => {
         }
         setAddedArt((currentArray) => [...currentArray, artSendToAPI])
         createArt(artSendToAPI)
+        .then(setNewArtInGallery({
+                name: "",
+                image: "",
+                description: "",
+                width: "",
+                height: ""
+            })
+        )
+     }
 
-        }
-
-    // JSX to display Add New Image Form
+    // JSX to display Add New Art to Gallery Form
     return (
+        <>
+        <Breadcrumb 
+        style={{
+            margin: 12
+            }}>
+                <BreadcrumbItem
+                    href="/"
+                    tag="a"
+                    >
+                    Home
+                </BreadcrumbItem>
+                <BreadcrumbItem
+                    href="/galleries"
+                    tag="a"
+                    >
+                    Galleries
+                </BreadcrumbItem>
+                <BreadcrumbItem
+                >
+                    {galleryId}
+                </BreadcrumbItem>
+        </Breadcrumb>
+
+        
         <div className="form">
             <Form className="article-form">
             <h2>Add Artwork to Gallery</h2>
@@ -48,6 +78,7 @@ export const AddArt = ({ currentUser }) => {
                         name="url"
                         placeholder="Enter artwork url here"
                         type="url"
+                        value={newArtInGallery.image}
                         onChange={(event) => {
                             const artCopy = { ...newArtInGallery };
                             artCopy.image = event.target.value;
@@ -77,6 +108,7 @@ export const AddArt = ({ currentUser }) => {
                         name="text"
                         placeholder="Enter artwork name here"
                         type="textarea"
+                        value={newArtInGallery.name}
                         onChange={(event) => {
                             const artCopy = { ...newArtInGallery };
                             artCopy.name = event.target.value;
@@ -91,6 +123,7 @@ export const AddArt = ({ currentUser }) => {
                         name="width"
                         placeholder="Enter artwork width here"
                         type="number"
+                        value={newArtInGallery.width}
                         onChange={(event) => {
                             const artCopy = { ...newArtInGallery };
                             artCopy.width = event.target.value;
@@ -105,6 +138,7 @@ export const AddArt = ({ currentUser }) => {
                         name="height"
                         placeholder="Enter artwork height here"
                         type="number"
+                        value={newArtInGallery.height}
                         onChange={(event) => {
                             const artCopy = { ...newArtInGallery };
                             artCopy.height = event.target.value;
@@ -119,6 +153,7 @@ export const AddArt = ({ currentUser }) => {
                         name="text"
                         placeholder="Enter artwork description here"
                         type="textarea"
+                        value={newArtInGallery.description}
                         onChange={(event) => {
                             const artCopy = { ...newArtInGallery };
                             artCopy.description = event.target.value;
@@ -146,13 +181,13 @@ export const AddArt = ({ currentUser }) => {
                     </CardHeader>
                     {addedArt.map((art) => {
                         return (
-                        <ListGroup flush key={art.id}>
+                            <ListGroup flush key={art.id}>
                             <ListGroupItem>
-                                {art.name}
+                                Artwork: {art.name}
                             </ListGroupItem>
                         </ListGroup>
                         )
-                    }) }                   
+                        }) }                   
                     </Card>
 
             {/* Submit Gallery Button */}
@@ -162,5 +197,6 @@ export const AddArt = ({ currentUser }) => {
             </Button>
             </Link>
         </div>
+    </>
     )
 }

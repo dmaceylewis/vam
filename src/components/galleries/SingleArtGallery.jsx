@@ -30,7 +30,10 @@ export const SingleArtGallery = ({ currentUser }) => {
     return (
         <>
 
-            <Breadcrumb style={{margin: 5}}>
+            <Breadcrumb 
+            style={{
+                margin: 12
+                }}>
                 <BreadcrumbItem
                     href="/"
                     tag="a"

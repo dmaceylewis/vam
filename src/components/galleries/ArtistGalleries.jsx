@@ -11,6 +11,8 @@ import {
 } from "reactstrap"
 import "./galleries.css"
 import { useEffect, useState } from "react";
+import { deleteGallery } from "../../services/galleryService";
+import { getAllGalleriesByUser } from "../../services/artistService";
 
 {/* SINGLE ARTIST GALLERY */}
 export const ArtistGalleries = ({ currentUser, myGalleries }) => {
@@ -39,6 +41,16 @@ export const ArtistGalleries = ({ currentUser, myGalleries }) => {
     useEffect(() => {
         showRandomArt()
     }, [photos])
+
+
+    {/* Delete Image Button Function */}
+    const handleDelete = (gallery) => {
+        deleteGallery(gallery.id).then(() => {
+        getAllGalleriesByUser(currentUser.id).then((imageArray) => {
+            setImage(imageArray)
+        })})
+    }
+
 
     return (
         <>
@@ -103,6 +115,21 @@ export const ArtistGalleries = ({ currentUser, myGalleries }) => {
                                         ADD ART TO GALLERY
                                     </Button>
                                     </Link>
+                                ) : (
+                                    ""
+                                )}
+
+                                {/* Delete Image Button */}
+                                {myGalleries.userId !== currentUser.id ? (
+                                <Button color="danger" 
+                                    block={true}
+                                    style={{
+                                        margin: 5
+                                    }}
+                                    onClick={() => handleDelete(gallery)}
+                                >
+                                    DELETE GALLERY
+                                </Button>
                                 ) : (
                                     ""
                                 )}

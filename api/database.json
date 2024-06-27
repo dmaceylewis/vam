@@ -143,6 +143,51 @@
       "height": 1080,
       "galleryId": 3,
       "id": 10
+    },
+    {
+      "name": "Rage",
+      "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/IMG_5604%202.PNG?alt=media&token=d3373660-7fae-4ed4-89e2-4ddd27defd42",
+      "description": "Exploring the feeling of rage while being burnt out",
+      "width": 720,
+      "height": 1080,
+      "galleryId": 3,
+      "id": 11
+    },
+    {
+      "name": "Cranky",
+      "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/IMG_5589.PNG?alt=media&token=61144b89-8cfd-413f-9377-7a9575f326bc",
+      "description": "Exploring the feeling of crankiness while being burnt out",
+      "width": 720,
+      "height": 1080,
+      "galleryId": 3,
+      "id": 12
+    },
+    {
+      "name": "Off Balance",
+      "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/IMG_5829.PNG?alt=media&token=c66755b8-4e3d-4282-b5de-61ee047f0ac6",
+      "description": "The fuzzy feeling of being slightly off balance",
+      "width": 720,
+      "height": 900,
+      "galleryId": 2,
+      "id": 13
+    },
+    {
+      "name": "The Meeting Room",
+      "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/IMG_5830.PNG?alt=media&token=b0c5d456-77c0-4952-8d35-347693d7ed9d",
+      "description": "The meeting room of my parts",
+      "width": 1080,
+      "height": 1080,
+      "galleryId": 2,
+      "id": 14
+    },
+    {
+      "name": "Untitled",
+      "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/IMG_5828.PNG?alt=media&token=8561a196-4c73-4ffc-8d5d-a1be3bca370f",
+      "description": "Colorful acrylic pour",
+      "width": 1080,
+      "height": 1920,
+      "galleryId": 2,
+      "id": 15
     }
   ]
 }

@@ -54,7 +54,7 @@ export const NewGalleryExistingArtist = ({ currentUser }) => {
     
         const gallery = {
             name: newGallery.name,
-            artistId: newGallery.artistId,
+            artistId: parseInt(newGallery.artistId),
             userId: currentUser.id
         }
         createGallery(gallery).then((galleryId) => {
