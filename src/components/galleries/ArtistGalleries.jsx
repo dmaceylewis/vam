@@ -5,13 +5,15 @@ import {
     CardBody, 
     CardGroup, 
     CardImg,
-    CardTitle
+    CardTitle,
+    Col,
+    Row
 } from "reactstrap"
 import "./galleries.css"
 import { useEffect, useState } from "react";
 
 {/* SINGLE ARTIST GALLERY */}
-export const ArtistGalleries = ({ myGalleries }) => {
+export const ArtistGalleries = ({ currentUser, myGalleries }) => {
     const [photos, setPhotos] = useState([]);
     const [image, setImage] = useState({});
 
@@ -41,12 +43,13 @@ export const ArtistGalleries = ({ myGalleries }) => {
     return (
         <>
             <div>
+            <Row xs="2">
                 {myGalleries.map((gallery) => {
                     return (
+                        <Col key={gallery.id}>
                         <CardGroup style={{
                             margin: 5
                         }}
-                        key={gallery.id}
                         className="home-card-row">
                             <Card>
                                 {gallery.id === image?.galleryId ? 
@@ -87,12 +90,29 @@ export const ArtistGalleries = ({ myGalleries }) => {
                                         VISIT GALLERY
                                     </Button>
                                 </Link>
+                                {/* Add Artwork to Gallery Button */}
+                                {myGalleries.userId !== currentUser.id ? (
+                                    <Link to={`/editGallery/${gallery.id}`}>
+                                    <Button 
+                                        block 
+                                        color="info" 
+                                        style={{
+                                            margin: 5
+                                        }}
+                                    >
+                                        ADD ART TO GALLERY
+                                    </Button>
+                                    </Link>
+                                ) : (
+                                    ""
+                                )}
                                 </CardBody>
                             </Card>
                         </CardGroup>
+                    </Col>
                     )
                 })}
-                
+            </Row>
             </div>
         </>
     )

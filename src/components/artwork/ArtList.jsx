@@ -41,7 +41,7 @@ export const ArtList = ({ currentUser, galleryId, filteredArtGallery }) => {
                 <PhotoAlbum columns={2} layout="masonry" photos={photos} />
             </div>)
         :
-          ("Gallery incoming")
+          ("Gallery Coming Soon")
         }
             
         </>

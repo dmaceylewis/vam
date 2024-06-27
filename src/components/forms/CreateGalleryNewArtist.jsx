@@ -42,9 +42,9 @@ export const NewGalleryNewArtist = ({ currentUser }) => {
                     name: newArtInGallery.name,
                     image: newArtInGallery.image,
                     description: newArtInGallery.description,
-                    width: newArtInGallery.width,
-                    height: newArtInGallery.height,
-                    galleryId: galleryId
+                    width: parseInt(newArtInGallery.width),
+                    height: parseInt(newArtInGallery.height),
+                    galleryId: parseInt(galleryId)
                 }
                 createArt(artSendToAPI)
             }
@@ -179,9 +179,9 @@ export const NewGalleryNewArtist = ({ currentUser }) => {
                 <FormGroup>
                     <Input
                         id="exampleText"
-                        name="text"
+                        name="width"
                         placeholder="Enter artwork width here"
-                        type="textarea"
+                        type="number"
                         onChange={(event) => {
                             const artCopy = { ...newArtInGallery };
                             artCopy.width = event.target.value;
@@ -193,9 +193,9 @@ export const NewGalleryNewArtist = ({ currentUser }) => {
                 <FormGroup>
                     <Input
                         id="exampleText"
-                        name="text"
+                        name="height"
                         placeholder="Enter artwork height here"
-                        type="textarea"
+                        type="number"
                         onChange={(event) => {
                             const artCopy = { ...newArtInGallery };
                             artCopy.height = event.target.value;

@@ -71,7 +71,7 @@
       "name": "Drifting",
       "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/Drifting.jpg?alt=media&token=33123149-4ac3-4fb1-b682-8254fd4c18f8",
       "width": 1080,
-      "height": 720,
+      "height": 1920,
       "description": "true",
       "galleryId": 2,
       "artistId": 2
@@ -125,6 +125,24 @@
       "description": "true",
       "galleryId": 1,
       "artistId": 1
+    },
+    {
+      "name": "Frustration",
+      "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/IMG_5602%202.PNG?alt=media&token=5f27e308-7105-4661-b4e0-12cd4b0439f9",
+      "description": "Exploring the feeling of frustration while being burnt out",
+      "width": 720,
+      "height": 1084,
+      "galleryId": 3,
+      "id": 9
+    },
+    {
+      "name": "Anger",
+      "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/IMG_5603%202.PNG?alt=media&token=faaaaf5c-b157-4ca3-8810-8f50458a03dc",
+      "description": "Exploring the feeling of anger while being burnt out",
+      "width": 1080,
+      "height": 1080,
+      "galleryId": 3,
+      "id": 10
     }
   ]
 }

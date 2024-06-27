@@ -1,6 +1,7 @@
 import { 
     Button, 
     Card, 
+    CardSubtitle, 
     CardText, 
     CardTitle, 
     Col, 
@@ -48,20 +49,39 @@ export const Home = ({ currentUser }) => {
             <div className="about-vam">
             <Row xs="2">
                 <Col sm="6">
-                    <img src="..." className="rounded" alt="..." />
+                    <img src="https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/Black%20%26%20White%20Typography%20Creative%20Artist%20ArtDesign%20Logo%20.png?alt=media&token=a9587cbd-3027-486b-8e71-a7725c373b0e" 
+                    className="rounded" alt="VAM Logo" />
                 </Col>
                 <Col sm="6">
                     <Card
                         body
                     >
-                        <CardTitle tag="h5">
+                        <CardTitle tag="h3">
                         About VAM
                         </CardTitle>
                         <CardText>
-                        VAM is a virtual art gallery that acts as a hub for artists to showcase their work year-round
+                        VAM is a Virtual Art Museum that acts as a hub for artists to showcase their work year-round.
+                        Artists can curate their digital galleries and explore other exhibits.
+                        </CardText>
+                        <CardSubtitle
+                            className="mb-2 text-muted"
+                            tag="h6"
+                        >
+                            Scroll down to explore our current galleries
+                        </CardSubtitle>
+                    </Card>
+                    <br></br>
+                    <Card
+                        body
+                    >
+                        <CardTitle tag="h4">
+                        Join the VAM Community
+                        </CardTitle>
+                        <CardText>
+                        Create an account and showcase your art with us!
                         </CardText>
                         <Button color="primary">
-                        Go somewhere
+                        Register
                         </Button>
                     </Card>
                 </Col>

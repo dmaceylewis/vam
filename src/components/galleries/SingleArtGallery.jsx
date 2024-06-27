@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react"
-import { ArtList } from "../artwork/Art";
+import { ArtList } from "../artwork/ArtList";
 import { getAllGalleriesByUser } from "../../services/artistService";
 import { getGalleryById } from "../../services/galleryService";
 import { useParams } from "react-router-dom";
+import { Breadcrumb, BreadcrumbItem } from "reactstrap";
 
 export const SingleArtGallery = ({ currentUser }) => {
     const [artGalleries, setArtGalleries] = useState([]);
@@ -28,6 +29,26 @@ export const SingleArtGallery = ({ currentUser }) => {
 
     return (
         <>
+
+            <Breadcrumb style={{margin: 5}}>
+                <BreadcrumbItem
+                    href="/"
+                    tag="a"
+                >
+                    Home
+                </BreadcrumbItem>
+                <BreadcrumbItem
+                    href="/galleries"
+                    tag="a"
+                >
+                    Galleries
+                </BreadcrumbItem>
+                <BreadcrumbItem
+                >
+                    {filteredArtGallery.name}
+                </BreadcrumbItem>
+            </Breadcrumb>
+
             <div className="vam-header">
             
                 <article className="vam-title" >

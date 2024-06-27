@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import { Button, Card, CardBody, CardGroup, CardImg, CardTitle, Col } from "reactstrap"
+import { Button, Card, CardBody, CardGroup, CardImg, CardSubtitle, CardTitle, Col } from "reactstrap"
 
-export const Gallery = ({allGalleries, gallery}) => {
+export const Gallery = ({ currentUser, allGalleries, gallery }) => {
     const [photos, setPhotos] = useState([]);
     const [image, setImage] = useState({});
 
@@ -74,6 +74,12 @@ export const Gallery = ({allGalleries, gallery}) => {
                                     <CardTitle tag="h5">
                                         {gallery.name}
                                     </CardTitle>
+                                    <CardSubtitle
+                                    className="mb-2 text-muted"
+                                    tag="h6"
+                                    >
+                                        {gallery.artist?.name}
+                                    </CardSubtitle>
                                     <Link to={`/galleries/${gallery.id}`}>
                                         <Button 
                                             block 
@@ -85,6 +91,22 @@ export const Gallery = ({allGalleries, gallery}) => {
                                             VISIT GALLERY
                                         </Button>
                                     </Link>
+                                    {/* Add Artwork to Gallery Button */}
+                                    {/* {allGalleries.userId !== currentUser?.id ? (
+                                        <Link to={`/editGallery/${gallery.id}`}>
+                                        <Button 
+                                            block 
+                                            color="info" 
+                                            style={{
+                                                margin: 5
+                                            }}
+                                        >
+                                            ADD ART TO GALLERY
+                                        </Button>
+                                        </Link>
+                                    ) : (
+                                        ""
+                                    )} */}
                                     </CardBody>
                                 </Card>
                             </CardGroup>
