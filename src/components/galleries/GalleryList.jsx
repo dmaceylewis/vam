@@ -5,12 +5,15 @@ import {
     CardBody, 
     CardGroup, 
     CardImg,
-    CardTitle
+    CardTitle,
+    Col,
+    Row
 } from "reactstrap"
 import "./galleries.css"
 import { getAllGalleries } from "../../services/galleryService.jsx"
 import { useEffect, useState } from "react";
 import "../home/home.css"
+import { Gallery } from "./Gallery.jsx";
 
 {/* GALLERY LIST */}
 export const GalleriesList = () => {
@@ -22,51 +25,19 @@ export const GalleriesList = () => {
         })
     }, []);
 
+
     { /* JSX to display All VAM Galleries in a List */ }
     return (
         <>
-            <div>
+            <Row xs="2">
+
                 {allGalleries.map((gallery) => {
                     return (
-                        <CardGroup style={{
-                            margin: 5
-                        }}
-                        key={gallery.id}
-                        className="home-card-row">
-                            <Card>
-                                {gallery.arts.map((singleArt) => {
-                                    return <CardImg
-                                        alt="Card image cap"
-                                        src={singleArt.image}
-                                        top
-                                        style={{
-                                            height: 300
-                                        }}
-                                        width="100%"
-                                    />
-                                })}
-                                <CardBody>
-                                <CardTitle tag="h5">
-                                    {gallery.name}
-                                </CardTitle>
-                                <Link to={`/galleries/${gallery.id}`}>
-                                    <Button 
-                                        block 
-                                        color="primary" 
-                                        style={{
-                                            margin: 5
-                                        }}
-                                    >
-                                        VISIT GALLERY
-                                    </Button>
-                                </Link>
-                                </CardBody>
-                            </Card>
-                        </CardGroup>
+                        <Gallery key={gallery.id} gallery={gallery} allGalleries={allGalleries}/>
                     )
-                })}
+                    })}
                 
-            </div>
+            </Row>
         </>
     )
 }

@@ -3,6 +3,10 @@ export const getAllGalleries = () => {
     return fetch("http://localhost:8088/galleries?_expand=artist&_embed=arts").then(res => res.json())
 }
 
+export const getGalleryById = (id) => {
+    return fetch(`http://localhost:8088/galleries/${id}?_expand=artist&_embed=arts`).then(res => res.json())
+}
+
 // ADD NEW GALLERY TO MY GALLERY FETCH CALL => see module CreateGalleries.jsx
 export const createGallery = (gallery) => {
     return fetch(`http://localhost:8088/galleries`, {

@@ -33,11 +33,9 @@ export const MyGallery = ({ currentUser }) => {
             
                 <article className="vam-title" >
                     <h1>VAM</h1>
-                    {galleries.map((gallery) => {
-                    return (
-                    <h1 key={gallery.id}>{gallery.artist?.name}</h1>
-                            )
-                    })}
+                    
+                    <h2>{galleries[0]?.artist?.name}</h2>
+                    
                 </article>
                 
             
@@ -56,21 +54,14 @@ export const MyGallery = ({ currentUser }) => {
                     width="100%"
                     />
                     <CardBody>
-                    <CardTitle tag="h5">
+                    <CardTitle tag="h4">
                             About the Artist
                             </CardTitle>
-                            {galleries.map((gallery) => {
-                            return (
-                            <CardText key={gallery.id}>
-                            {gallery.artist?.artistStatement}
+                            
+                            <CardText>
+                            {galleries[0]?.artist?.artistStatement}
                             </CardText>
-                                    )
-                            })}
-                    <CardText>
-                        <small className="text-muted">
-                        Last updated 3 mins ago
-                        </small>
-                    </CardText>
+                             
                     </CardBody>
                 </Card>
             </div>
@@ -79,13 +70,11 @@ export const MyGallery = ({ currentUser }) => {
                 <article className="vam-gallereis">
                     <h1>
                         <span className="d-block p-2 text-bg-primary">
-                        {galleries.map((gallery) => {
-                            return (
-                            <CardText key={gallery.id}>
-                            {gallery.artist?.name} Galleries
+                    
+                            <CardText>
+                            {galleries[0]?.artist?.name} Galleries
                             </CardText>
-                                    )
-                            })}
+                        
                         </span>
                     </h1>
                 </article>

@@ -1,29 +1,31 @@
 import { useEffect, useState } from "react"
 import { getAllGalleriesByUser } from "../../services/artistService";
+import { getAllGalleries } from "../../services/galleryService";
 import PhotoAlbum from "react-photo-album";
 import "./art.css"
 
-export const ArtList = ({ currentUser }) => {
+export const ArtList = ({ currentUser, galleryId, filteredArtGallery }) => {
     const [galleries, setGalleries] = useState([]);
     const [photos, setPhotos] = useState([]);
 
     useEffect(() => {
-        getAllGalleriesByUser(currentUser.id).then((galleryArray) => {
+        getAllGalleries().then((galleryArray) => {
             setGalleries(galleryArray)
         })
     }, []);
 
     useEffect(() => {
         const newPhotoArray = []
-        galleries[0]?.arts?.forEach((singleArt) => {
+        filteredArtGallery.arts?.forEach((singleArt) => {
         newPhotoArray.push({
             src: singleArt.image, 
             width: singleArt.width, 
-            height: singleArt.height})
+            height: singleArt.height,
+            galleryId: singleArt.galleryId})
         })
         setPhotos(newPhotoArray)
 
-    }, [galleries])
+    }, [filteredArtGallery])
 
     // const photos = artwork.arts?.map((singleArt) => {[
     //     { src: singleArt.image, width: 800, height: 600 },
@@ -34,9 +36,14 @@ export const ArtList = ({ currentUser }) => {
     { /* JSX to display Art in a List */ }
     return (
         <>
-            <div>
+        {galleryId == photos[0]?.galleryId ? 
+            (<div>
                 <PhotoAlbum columns={2} layout="masonry" photos={photos} />
-            </div>
+            </div>)
+        :
+          ("Gallery incoming")
+        }
+            
         </>
     )
 }

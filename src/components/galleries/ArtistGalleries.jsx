@@ -19,6 +19,7 @@ export const ArtistGalleries = ({ myGalleries }) => {
         const newPhotoArray = []
         myGalleries[0]?.arts?.forEach((singleArt) => {
         newPhotoArray.push({
+            galleryId: singleArt.galleryId,
             image: singleArt.image})
         })
         setPhotos(newPhotoArray)
@@ -29,7 +30,7 @@ export const ArtistGalleries = ({ myGalleries }) => {
         
         const randomIndex = Math.floor(Math.random() * photos.length);
         
-        const randomImage = photos[randomIndex]?.image;
+        const randomImage = photos[randomIndex];
         setImage(randomImage);
     }
 
@@ -48,15 +49,28 @@ export const ArtistGalleries = ({ myGalleries }) => {
                         key={gallery.id}
                         className="home-card-row">
                             <Card>
-                                <CardImg
+                                {gallery.id === image?.galleryId ? 
+                                    <CardImg
                                         alt="Card image cap"
-                                        src={image}
+                                        src={image.image}
                                         top
                                         style={{
                                             height: 300
                                         }}
                                         width="100%"
                                     />
+                                    :
+                                    <CardImg
+                                        alt="Card image cap"
+                                        src=""
+                                        top
+                                        style={{
+                                            height: 300
+                                        }}
+                                        width="100%"
+                                    />
+                                }
+                                
                             
                                 <CardBody>
                                 <CardTitle tag="h5">
