@@ -20,10 +20,14 @@ export const MyGallery = ({ currentUser }) => {
         })
     }, []);
 
-    useEffect(() => {
+    const getAndSetMyGallery = () => {
         getAllGalleriesByUser(currentUser.id).then((galleryArray) => {
             setGalleries(galleryArray)
         })
+    }
+
+    useEffect(() => {
+        getAndSetMyGallery()
     }, []);
 
    { /* JSX to display My Gallery => acting as the Artist portal */ }
@@ -35,7 +39,6 @@ export const MyGallery = ({ currentUser }) => {
                     <h1>VAM</h1>
                     
                     <h2>{galleries[0]?.artist?.name}</h2>
-                    
                 </article>
                 
             
@@ -54,14 +57,13 @@ export const MyGallery = ({ currentUser }) => {
                     width="100%"
                     />
                     <CardBody>
-                    <CardTitle tag="h4">
-                            About the Artist
+                            <CardTitle tag="h4">
+                                    About the Artist
                             </CardTitle>
                             
                             <CardText>
                             {galleries[0]?.artist?.artistStatement}
                             </CardText>
-                             
                     </CardBody>
                 </Card>
             </div>
@@ -78,7 +80,11 @@ export const MyGallery = ({ currentUser }) => {
                         </span>
                     </h1>
                 </article>
-                <ArtistGalleries currentUser={currentUser} myGalleries={galleries} />
+                <ArtistGalleries 
+                    currentUser={currentUser} 
+                    myGalleries={galleries} 
+                    getAndSetMyGallery={getAndSetMyGallery}
+                />
             </div>
         </>
     )

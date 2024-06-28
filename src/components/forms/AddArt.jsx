@@ -1,8 +1,19 @@
 {/* PURPOSE: Add Art to Gallery */}
 
-import { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
-import { Breadcrumb, BreadcrumbItem, Button, Card, CardHeader, Form, FormGroup, Input, List, ListGroup, ListGroupItem } from "reactstrap";
+import { useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import { 
+    Breadcrumb, 
+    BreadcrumbItem, 
+    Button, 
+    Card, 
+    CardHeader, 
+    Form, 
+    FormGroup, 
+    Input, 
+    ListGroup, 
+    ListGroupItem 
+} from "reactstrap";
 import { createArt } from "../../services/artworkSerive";
 
 
@@ -191,9 +202,13 @@ export const AddArt = ({ currentUser }) => {
                     </Card>
 
             {/* Submit Gallery Button */}
+            <br></br>
+            <h5 className="mb-2 text-muted">
+                Click when you're finished adding art to the gallery
+            </h5>
             <Link to={`/my-galleries`}>
             <Button color="primary">
-                Submit New Gallery
+                Save Art Gallery
             </Button>
             </Link>
         </div>

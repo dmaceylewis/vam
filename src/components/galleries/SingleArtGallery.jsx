@@ -66,7 +66,11 @@ export const SingleArtGallery = ({ currentUser }) => {
 
             <div>
                 <article className="vam-galleries">    
-                    <ArtList currentUser={currentUser} galleryId={galleryId} filteredArtGallery={filteredArtGallery}/>
+                    <ArtList 
+                        currentUser={currentUser} 
+                        galleryId={galleryId} 
+                        filteredArtGallery={filteredArtGallery}
+                    />
                 </article>
             </div>
         </>

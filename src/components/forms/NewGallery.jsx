@@ -7,13 +7,20 @@ export const CreateNewGalleries = () => {
     return (
         <>
             <Container>
-                <h2>Create a New Gallery for an Exiting Artist or a New Artist</h2>
-                <h6>Select an option below</h6>
+                    <div className="vam-header">
+                        <article className="vam-title" >
+                            <h1>VAM</h1>
+                        </article>
+                    </div>
+                    <hr></hr>
+                    <h2>Create a New Gallery for an Exiting Artist or a New Artist</h2>
+                    <h6>Select an option below</h6>
                 <Row xs="2">
-                    <Col className="bg-light border">
+                    <Col>
                                 <Link to={`/create-gallery/existing-artist`}>
                                     <Button 
-                                        block 
+                                        block
+                                        size="lg" 
                                         color="primary" 
                                         style={{
                                             margin: 5
@@ -23,10 +30,11 @@ export const CreateNewGalleries = () => {
                                     </Button>
                                 </Link>
                     </Col>
-                    <Col className="bg-light border">
+                    <Col>
                                 <Link to={`/create-gallery/new-artist`}>
                                     <Button 
-                                        block 
+                                        block
+                                        size="lg" 
                                         color="primary" 
                                         style={{
                                             margin: 5
