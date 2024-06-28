@@ -37,8 +37,8 @@ export const ArtList = ({ currentUser, galleryId, filteredArtGallery }) => {
     {/* Delete Image Button Function */}
     const handleDelete = (gallery) => {
         deleteGallery(gallery.id).then(() => {
-        getAllGalleriesByUser(currentUser.id).then((imageArray) => {
-            setImage(imageArray)
+        getAllGalleriesByUser(currentUser.id).then((galleryArray) => {
+            setGalleries(galleryArray)
         })})
     }
 
@@ -55,7 +55,7 @@ export const ArtList = ({ currentUser, galleryId, filteredArtGallery }) => {
             
             <br></br>
             {/* Add Artwork to Gallery Button */}
-            {galleries.userId !== currentUser.id ? (
+            {filteredArtGallery.userId === currentUser.id ? (
                 <Link to={`/editGallery/${galleryId}`}>
                     <Button 
                         block 
@@ -72,13 +72,13 @@ export const ArtList = ({ currentUser, galleryId, filteredArtGallery }) => {
             )}
 
             {/* Delete Image Button */}
-            {galleries.userId !== currentUser.id ? (
+            {filteredArtGallery.userId === currentUser.id ? (
                 <Button color="danger" 
                     block={true}
                     style={{
                         margin: 5
                     }}
-                    onClick={() => handleDelete(gallery)}
+                    onClick={() => handleDelete(galleryId)}
                 >
                     DELETE GALLERY
                 </Button>

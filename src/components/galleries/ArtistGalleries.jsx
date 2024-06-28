@@ -67,7 +67,7 @@ export const ArtistGalleries = ({ currentUser, myGalleries }) => {
                                 {gallery.id === image?.galleryId ? 
                                     <CardImg
                                         alt="Card image cap"
-                                        src={image.image}
+                                        src={image?.image}
                                         top
                                         style={{
                                             height: 300
@@ -86,11 +86,12 @@ export const ArtistGalleries = ({ currentUser, myGalleries }) => {
                                     />
                                 }
                                 
-                            
                                 <CardBody>
+
                                 <CardTitle tag="h5">
                                     {gallery.name}
                                 </CardTitle>
+
                                 <Link to={`/galleries/${gallery.id}`}>
                                     <Button 
                                         block 
@@ -102,6 +103,7 @@ export const ArtistGalleries = ({ currentUser, myGalleries }) => {
                                         VISIT GALLERY
                                     </Button>
                                 </Link>
+
                                 {/* Add Artwork to Gallery Button */}
                                 {myGalleries.userId !== currentUser.id ? (
                                     <Link to={`/editGallery/${gallery.id}`}>
@@ -133,6 +135,7 @@ export const ArtistGalleries = ({ currentUser, myGalleries }) => {
                                 ) : (
                                     ""
                                 )}
+
                                 </CardBody>
                             </Card>
                         </CardGroup>

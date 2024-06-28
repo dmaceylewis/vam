@@ -43,6 +43,12 @@
       "name": "Burnt Out",
       "userId": 2,
       "artistId": 2
+    },
+    {
+      "name": "In Remembrance",
+      "artistId": 1,
+      "userId": 1,
+      "id": 4
     }
   ],
   "arts": [
@@ -133,6 +139,7 @@
       "width": 720,
       "height": 1084,
       "galleryId": 3,
+      "artistId": 2,
       "id": 9
     },
     {
@@ -142,6 +149,7 @@
       "width": 1080,
       "height": 1080,
       "galleryId": 3,
+      "artistId": 2,
       "id": 10
     },
     {
@@ -151,6 +159,7 @@
       "width": 720,
       "height": 1080,
       "galleryId": 3,
+      "artistId": 2,
       "id": 11
     },
     {
@@ -160,6 +169,7 @@
       "width": 720,
       "height": 1080,
       "galleryId": 3,
+      "artistId": 2,
       "id": 12
     },
     {
@@ -169,6 +179,7 @@
       "width": 720,
       "height": 900,
       "galleryId": 2,
+      "artistId": 2,
       "id": 13
     },
     {
@@ -178,6 +189,7 @@
       "width": 1080,
       "height": 1080,
       "galleryId": 2,
+      "artistId": 2,
       "id": 14
     },
     {
@@ -187,7 +199,38 @@
       "width": 1080,
       "height": 1920,
       "galleryId": 2,
+      "artistId": 2,
       "id": 15
+    },
+    {
+      "name": "Past Realizations",
+      "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/IMG_5816.jpg?alt=media&token=04ebf06c-a4ff-4955-90c1-21c422c47825",
+      "description": "Recreation of Tucker's piece, \"Realizations,\" painted by his sister Macey",
+      "width": 1080,
+      "height": 1520,
+      "galleryId": 4,
+      "artistId": 1,
+      "id": 16
+    },
+    {
+      "name": "Dumby Youth Reel",
+      "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/IMG_5817.jpg?alt=media&token=f1b791a4-69d7-41d8-ae37-2998ac2fbd37",
+      "description": "Recreation od Tucker's piece, \"Dumpy Youth Reel,\" painted by his sister, Macey.",
+      "width": 1080,
+      "height": 1520,
+      "galleryId": 4,
+      "artistId": 1,
+      "id": 17
+    },
+    {
+      "name": "Cheech & Chong Remix",
+      "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/IMG_5818.jpg?alt=media&token=a8117b2b-b36b-4d74-ae94-4870c7b0d09b",
+      "description": "Inspired by Tucker's diptych, \"Cheech & Chong,\" painted by his sister.",
+      "width": 1520,
+      "height": 1080,
+      "galleryId": 4,
+      "artistId": 1,
+      "id": 18
     }
   ]
 }

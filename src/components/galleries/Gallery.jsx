@@ -1,6 +1,15 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import { Button, Card, CardBody, CardGroup, CardImg, CardSubtitle, CardTitle, Col } from "reactstrap"
+import { 
+    Button, 
+    Card, 
+    CardBody,
+    CardGroup,
+    CardImg, 
+    CardSubtitle, 
+    CardTitle, 
+    Col 
+} from "reactstrap"
 
 export const Gallery = ({ currentUser, allGalleries, gallery }) => {
     const [photos, setPhotos] = useState([]);
@@ -57,19 +66,6 @@ export const Gallery = ({ currentUser, allGalleries, gallery }) => {
                                             width="100%"
                                             />}
                                             
-                                    {/* {gallery.arts.map((singleArt) => {
-                                        return <CardImg
-                                        key={singleArt.id}
-                                        alt="Card image cap"
-                                        src={singleArt.image}
-                                        top
-                                        style={{
-                                            height: 300
-                                            }}
-                                            width="100%"
-                                            />
-                                            })} */}
-                                            
                                     <CardBody>
                                     <CardTitle tag="h5">
                                         {gallery.name}
@@ -91,8 +87,9 @@ export const Gallery = ({ currentUser, allGalleries, gallery }) => {
                                             VISIT GALLERY
                                         </Button>
                                     </Link>
+
                                     {/* Add Artwork to Gallery Button */}
-                                    {/* {allGalleries.userId !== currentUser?.id ? (
+                                    {/* {gallery.userId !== currentUser?.id ? (
                                         <Link to={`/editGallery/${gallery.id}`}>
                                         <Button 
                                             block 
@@ -107,6 +104,7 @@ export const Gallery = ({ currentUser, allGalleries, gallery }) => {
                                     ) : (
                                         ""
                                     )} */}
+
                                     </CardBody>
                                 </Card>
                             </CardGroup>

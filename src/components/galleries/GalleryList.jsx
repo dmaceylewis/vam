@@ -1,14 +1,4 @@
-import { Link } from "react-router-dom"
-import { 
-    Button,
-    Card, 
-    CardBody, 
-    CardGroup, 
-    CardImg,
-    CardTitle,
-    Col,
-    Row
-} from "reactstrap"
+import { Row} from "reactstrap"
 import "./galleries.css"
 import { getAllGalleries } from "../../services/galleryService.jsx"
 import { useEffect, useState } from "react";
