@@ -1,8 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Farro:wght@300;400;500;700");
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+
+/* COLOR PALETTE */
+:root {
+  font-family: "Farro", Helvetica, Arial, sans-serif;
+  line-height: 2;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  --primary: #ffb400;
+  --secondary: #00a6ed;
+  --info: #7fb800;
+  --warning: #f6511d;
+  --white: #ffffff;
+  --offWhite: #f2f2f3;
+  --dark: #3b3b3b;
+  --outline: #c3c0c0;
+  --appBackground: #dddade;
+}
+
+/* GLOBAL STYLES */
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Farro", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Farro", sans-serif;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+body {
+  background-color: var(--offWhite);
+  margin: 0;
 }
 
 .logo {

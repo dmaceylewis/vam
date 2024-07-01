@@ -15,11 +15,11 @@ export const UserViews = ({ currentUser }) => {
                         <Outlet />
                     </>
                 }
-                >
+            >
 
             <Route path="/" element={<Home currentUser={currentUser} />} />
 
-            {/* MY GALLERIES ROUTE */}
+            {/* GALLERIES ROUTE */}
             <Route path="galleries">
                 <Route index element={<Galleries currentUser={currentUser} />} />
             </Route>

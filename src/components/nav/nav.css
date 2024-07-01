@@ -1,8 +1,11 @@
 .navbar {
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
     width: 100%;
-    flex-wrap: nowrap;
+    margin-bottom: 1em;
+    width: 100%;
+    padding: 0.5rem;
   }
   
   .nav {
@@ -24,4 +27,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+  }
+
+  .navbar-link:hover {
+    color: var(--primary);
   }

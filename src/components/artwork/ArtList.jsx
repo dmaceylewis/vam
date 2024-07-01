@@ -43,6 +43,55 @@ export const ArtList = ({ currentUser, galleryId, filteredArtGallery }) => {
         })})
     }
 
+    // const renderContainer = ({ containerProps, children, containerRef }) => (
+    //     <div>
+    //       <div ref={containerRef} {...containerProps}>
+    //         {children}
+    //       </div>
+    //     </div>
+    //   );
+      
+    //   const renderRowContainer = ({ rowContainerProps, rowIndex, rowsCount, children }) => (
+    //     <>
+    //       <div {...rowContainerProps}>{children}</div>
+    //       {rowIndex < rowsCount - 1 && (
+    //         <div
+    //           style={{
+    //             borderTop: "2px solid #eee",
+    //             marginBottom: "20px",
+    //           }}
+    //         />
+    //       )}
+    //     </>
+    //   );
+
+    const renderPhoto = ({ layout, layoutOptions, imageProps, photo, ...restImageProps }) => {
+        <div 
+        style={{
+            boxSizing: "content-box",
+            alignItems: "center",
+            paddingBottom: 0,
+          }}
+        >
+            <img src={photo.src} alt={photo.alt} title={photo.alt}
+                style={{
+                width: "100%"
+            }} {...restImageProps} 
+            />
+            <div style={{
+                paddingTop: "8px",
+                paddingBottom: "8px",
+                overflow: "visible",
+                whiteSpace: "nowrap",
+                textAlign: "center",
+            }}
+            >
+                {photo.alt}
+            </div>
+        </div>
+
+    }
+
     { /* JSX to display Art in a List */ }
     return (
         <>
@@ -52,17 +101,9 @@ export const ArtList = ({ currentUser, galleryId, filteredArtGallery }) => {
                         columns={2} 
                         layout="masonry" 
                         photos={photos} 
-                        renderPhoto={({ imageProps: { src, alt, style, ...restImageProps } }) => (
-                            <img src={src} alt={alt} 
-                            style={{
-                                paddingTop: "8px",
-                                paddingBottom: "8px",
-                                width: "100%",
-                                overflow: "visible",
-                                whiteSpace: "nowrap",
-                                textAlign: "center",
-                              }} {...restImageProps} />
-                          )}
+                        // renderContainer={renderContainer}
+                        // renderRowContainer={renderRowContainer}
+                        renderPhoto={renderPhoto}
                     />
 
                     {/* <div className="overlay">

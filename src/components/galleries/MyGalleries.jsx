@@ -41,7 +41,6 @@ export const MyGallery = ({ currentUser }) => {
                     <h2>{galleries[0]?.artist?.name}</h2>
                 </article>
                 
-            
             <hr></hr>
             </div>
 
@@ -49,7 +48,7 @@ export const MyGallery = ({ currentUser }) => {
                 <Card className="my-2">
                     <CardImg
                     alt="Card image cap"
-                    src="https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/painting5-100.jpg?alt=media&token=4838414e-4a32-463c-be65-ce455b03c2e5"
+                    src={galleries[0]?.artist?.image}
                     style={{
                         height: 180
                     }}

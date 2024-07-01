@@ -31,10 +31,11 @@ export const UserNav = () => {
                     <NavLink href="/login">Login</NavLink>
                 </NavItem>
             </Nav>
-            {/* <Nav className='nav-logout-container'>
+            <Nav className='nav-logout-container'>
                 <NavItem>
                     {localStorage.getItem("vam_user") ? (
-                    <NavLink style={{
+                    <NavLink
+                    style={{
                         fontSize: "16px",
                         fontWeight: "bold"
                      }}
@@ -47,15 +48,7 @@ export const UserNav = () => {
                     </NavLink>
                     ) : ""}
                 </NavItem>
-                <NavItem>
-                    <NavLink href="/cart">
-                        <i style={{
-                                fontSize: "35px"
-                             }}
-                            className="fa-solid fa-cart-shopping"></i>
-                    </NavLink>
-                </NavItem>
-            </Nav> */}
+            </Nav>
         </Navbar>
     </div>
   );

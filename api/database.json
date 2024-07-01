@@ -17,12 +17,14 @@
     {
       "id": 1,
       "name": "Jaxon Tucker Lewis",
-      "artistStatement": "The late Tucker Lewis was a talented painter with cerebral palsy and limited mobility who created beautiful masterpieces by communicating with his eyes. He looks up for yes and shakes his head slightly for no. And while he can't physcially paint, he can guide a person called a 'tracker,' with his eyes, creating his own works of art without ever lifting a brush."
+      "artistStatement": "The late Tucker Lewis was a talented painter with cerebral palsy and limited mobility who created beautiful masterpieces by communicating with his eyes. He looks up for yes and shakes his head slightly for no. And while he couldn't physcially paint, he can guide a person called a 'tracker,' with his eyes, creating his own works of art without ever lifting a brush.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/painting5-100.jpg?alt=media&token=4838414e-4a32-463c-be65-ce455b03c2e5"
     },
     {
       "id": 2,
       "name": "D'Amale",
-      "artistStatement": "An Expressive Artist who explores their mental turmoil by pouring paint onto a canvas."
+      "artistStatement": "An Expressive Artist who explores their mental turmoil by pouring paint onto a canvas.",
+      "image": ""
     }
   ],
   "galleries": [
@@ -103,7 +105,7 @@
       "artistId": 1
     },
     {
-      "id": 6,
+      "id": 7,
       "name": "Dumpy Youth Reel",
       "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/Dumpy%20Youth%20Reel.jpg?alt=media&token=5fabfea6-879b-4ee7-b630-5d53b2efc9cd",
       "width": 1080,
@@ -113,7 +115,7 @@
       "artistId": 1
     },
     {
-      "id": 7,
+      "id": 9,
       "name": "Life's Double You",
       "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/Life's%20Double%20You.jpg?alt=media&token=f7145cc7-29d4-4507-829e-bbe435a6eee5",
       "width": 1080,
@@ -123,7 +125,7 @@
       "artistId": 1
     },
     {
-      "id": 8,
+      "id": 11,
       "name": "Space Adventure",
       "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/Space%20Adventure.jpg?alt=media&token=92c5da49-f350-4425-9b22-cde1e8987e79",
       "width": 1080,
@@ -140,7 +142,7 @@
       "height": 1084,
       "galleryId": 3,
       "artistId": 2,
-      "id": 9
+      "id": 13
     },
     {
       "name": "Anger",
@@ -150,7 +152,7 @@
       "height": 1080,
       "galleryId": 3,
       "artistId": 2,
-      "id": 10
+      "id": 14
     },
     {
       "name": "Rage",
@@ -160,7 +162,7 @@
       "height": 1080,
       "galleryId": 3,
       "artistId": 2,
-      "id": 11
+      "id": 15
     },
     {
       "name": "Cranky",
@@ -170,7 +172,7 @@
       "height": 1080,
       "galleryId": 3,
       "artistId": 2,
-      "id": 12
+      "id": 16
     },
     {
       "name": "Off Balance",
@@ -180,7 +182,7 @@
       "height": 900,
       "galleryId": 2,
       "artistId": 2,
-      "id": 13
+      "id": 17
     },
     {
       "name": "The Meeting Room",
@@ -190,7 +192,7 @@
       "height": 1080,
       "galleryId": 2,
       "artistId": 2,
-      "id": 14
+      "id": 18
     },
     {
       "name": "Untitled",
@@ -200,7 +202,7 @@
       "height": 1920,
       "galleryId": 2,
       "artistId": 2,
-      "id": 15
+      "id": 19
     },
     {
       "name": "Past Realizations",
@@ -210,7 +212,7 @@
       "height": 1520,
       "galleryId": 4,
       "artistId": 1,
-      "id": 16
+      "id": 20
     },
     {
       "name": "Dumby Youth Reel",
@@ -220,7 +222,7 @@
       "height": 1520,
       "galleryId": 4,
       "artistId": 1,
-      "id": 17
+      "id": 21
     },
     {
       "name": "Cheech & Chong Remix",
@@ -230,7 +232,7 @@
       "height": 1080,
       "galleryId": 4,
       "artistId": 1,
-      "id": 18
+      "id": 22
     },
     {
       "name": "Little Peeved",
@@ -239,7 +241,7 @@
       "width": 1580,
       "height": 1080,
       "galleryId": 1,
-      "id": 19
+      "id": 23
     }
   ]
 }
