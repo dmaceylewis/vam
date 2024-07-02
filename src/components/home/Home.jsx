@@ -10,6 +10,7 @@ import {
 } from "reactstrap"
 import "./home.css"
 import { GalleriesList } from "../galleries/GalleryList"
+import { Link } from "react-router-dom"
 
 export const Home = ({ currentUser }) => {
     return (
@@ -69,6 +70,8 @@ export const Home = ({ currentUser }) => {
                         >
                             Scroll down to explore our current galleries
                         </CardSubtitle>
+                        <br></br>
+                        <i className="fa-solid fa-circle-down fa-lg"></i>
                     </Card>
                     <br></br>
                     <Card
@@ -80,9 +83,11 @@ export const Home = ({ currentUser }) => {
                         <CardText>
                         Create an account and showcase your art with us!
                         </CardText>
-                        <Button color="primary">
-                        Register
-                        </Button>
+                        <Link to={`/register`}>
+                            <Button block color="primary">
+                            Register
+                            </Button>
+                        </Link>
                     </Card>
                 </Col>
             </Row>

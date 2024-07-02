@@ -17,7 +17,7 @@
     {
       "id": 1,
       "name": "Jaxon Tucker Lewis",
-      "artistStatement": "The late Tucker Lewis was a talented painter with cerebral palsy and limited mobility who created beautiful masterpieces by communicating with his eyes. He looks up for yes and shakes his head slightly for no. And while he couldn't physcially paint, he can guide a person called a 'tracker,' with his eyes, creating his own works of art without ever lifting a brush.",
+      "artistStatement": "The late Tucker Lewis was a talented painter with cerebral palsy and limited mobility who created beautiful masterpieces by communicating with his eyes. He looks up for yes and shakes his head slightly for no. And while he can't physcially paint, he can guide a person called a 'tracker,' with his eyes, creating his own works of art without ever lifting a brush.",
       "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/painting5-100.jpg?alt=media&token=4838414e-4a32-463c-be65-ce455b03c2e5"
     },
     {
@@ -242,6 +242,15 @@
       "height": 1080,
       "galleryId": 1,
       "id": 23
+    },
+    {
+      "name": "SMILE",
+      "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/IMG_5831.PNG?alt=media&token=f0ef04a4-2a50-41b8-b378-c8e4bde1df59",
+      "description": "Graffiti Stencil of Tucker",
+      "width": 1080,
+      "height": 1620,
+      "galleryId": 4,
+      "id": 24
     }
   ]
 }
