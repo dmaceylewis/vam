@@ -318,6 +318,26 @@
       "description": "Cat lounging on a rock wall outside",
       "galleryId": 5,
       "artistId": 3
+    },
+    {
+      "id": 30,
+      "name": "Girl",
+      "image": "https://thumbnails-photos.amazon.com/v1/thumbnail/fy_zJw1pRxe03mYGiFYFYA?ownerId=A29UJAZ5GUQUAA&viewBox=699%2C1049&groupShareToken=nYbW8balRgK7lgTZLE6MVA.0bN-8NLV5mytsC3I98KujY",
+      "width": 1080,
+      "height": 1520,
+      "description": "Girl",
+      "galleryId": 5,
+      "artistId": 3
+    },
+    {
+      "id": 31,
+      "name": "Woman",
+      "image": "https://thumbnails-photos.amazon.com/v1/thumbnail/xQYoB4-eQoembTOWldB6oA?viewBox=542%2C813&ownerId=A29UJAZ5GUQUAA&groupShareToken=nYbW8balRgK7lgTZLE6MVA.0bN-8NLV5mytsC3I98KujY",
+      "width": 1080,
+      "height": 1520,
+      "description": "Woman with wine",
+      "galleryId": 5,
+      "artistId": 3
     }
   ]
 }
