@@ -11,6 +11,12 @@
       "name": "D'Anna",
       "email": "me@email.com",
       "isArtist": "true"
+    },
+    {
+      "id": 3,
+      "name": "Mike",
+      "email": "mike@email.com",
+      "isArtist": "true"
     }
   ],
   "artists": [
@@ -24,7 +30,13 @@
       "id": 2,
       "name": "D'Amale",
       "artistStatement": "An Expressive Artist who explores their mental turmoil by pouring paint onto a canvas.",
-      "image": ""
+      "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/JPEG%20image-446D-825B-3D-0.jpeg?alt=media&token=94d9acfd-e185-421f-a035-a337370f9aca"
+    },
+    {
+      "id": 3,
+      "name": "Michael Adkins",
+      "artistStatement": "An Extremely Talented Photographer.",
+      "image": "https://thumbnails-photos.amazon.com/v1/thumbnail/TEbvzpeGTH2YKrUPADnISA?viewBox=1219%2C813&ownerId=A29UJAZ5GUQUAA&groupShareToken=nYbW8balRgK7lgTZLE6MVA.0bN-8NLV5mytsC3I98KujY"
     }
   ],
   "galleries": [
@@ -51,6 +63,12 @@
       "artistId": 1,
       "userId": 1,
       "id": 4
+    },
+    {
+      "id": 5,
+      "name": "Photos",
+      "userId": 3,
+      "artistId": 3
     }
   ],
   "arts": [
@@ -251,6 +269,55 @@
       "height": 1620,
       "galleryId": 4,
       "id": 24
+    },
+    {
+      "name": "The Walls of the Halls",
+      "image": "https://firebasestorage.googleapis.com/v0/b/vam-c9.appspot.com/o/the_walls_of_the_halls.jpg?alt=media&token=c790a6cb-a470-4a1a-aac2-4b754aa91fcb",
+      "description": "the walls of the halls",
+      "width": 1080,
+      "height": 1020,
+      "galleryId": 1,
+      "id": 25
+    },
+    {
+      "id": 26,
+      "name": "Black Cat",
+      "image": "https://thumbnails-photos.amazon.com/v1/thumbnail/TEbvzpeGTH2YKrUPADnISA?viewBox=1219%2C813&ownerId=A29UJAZ5GUQUAA&groupShareToken=nYbW8balRgK7lgTZLE6MVA.0bN-8NLV5mytsC3I98KujY",
+      "width": 1080,
+      "height": 720,
+      "description": "Black Cat",
+      "galleryId": 5,
+      "artistId": 3
+    },
+    {
+      "id": 27,
+      "name": "Old Times",
+      "image": "https://thumbnails-photos.amazon.com/v1/thumbnail/y4byxu2rTZ6VHVu3zhTIpw?ownerId=A29UJAZ5GUQUAA&viewBox=699%2C1049&groupShareToken=nYbW8balRgK7lgTZLE6MVA.0bN-8NLV5mytsC3I98KujY",
+      "width": 1080,
+      "height": 1520,
+      "description": "Woman smoking in the streets at night",
+      "galleryId": 5,
+      "artistId": 3
+    },
+    {
+      "id": 28,
+      "name": "Costumes",
+      "image": "https://thumbnails-photos.amazon.com/v1/thumbnail/IbFOYirEQ8qExEzzSq8WjQ?viewBox=542%2C813&ownerId=A29UJAZ5GUQUAA&groupShareToken=nYbW8balRgK7lgTZLE6MVA.0bN-8NLV5mytsC3I98KujY",
+      "width": 1080,
+      "height": 1520,
+      "description": "Woman dressed up as Velma",
+      "galleryId": 5,
+      "artistId": 3
+    },
+    {
+      "id": 29,
+      "name": "Lounging Cat",
+      "image": "https://thumbnails-photos.amazon.com/v1/thumbnail/8XVAtfakRvqkQOQqiiy90A?viewBox=1220%2C813&ownerId=A29UJAZ5GUQUAA&groupShareToken=nYbW8balRgK7lgTZLE6MVA.0bN-8NLV5mytsC3I98KujY",
+      "width": 1080,
+      "height": 720,
+      "description": "Cat lounging on a rock wall outside",
+      "galleryId": 5,
+      "artistId": 3
     }
   ]
 }
